@@ -64,7 +64,7 @@ const firebaseConfig = {
       firebase.database().ref("fbdet").child(messageId).remove();
     }
     firebase.database().ref("fbdet").on("child_removed", function (snapshot) {
-      // remove message node
+      // remove message nodes
       document.getElementById("message-" + snapshot.key).innerHTML = "deleted";
     });
 
